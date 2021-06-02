@@ -14,8 +14,6 @@ e
 k
 ;src/main/kotlin/br/com/zup/autores/DeletaAutorController.kt,4\a\4a2e4e426b5f42344d89fbab2aa01cc5b7cc3f94
 m
-=src/main/kotlin/br/com/zup/autores/AtualizaAutorController.kt,4\d\4de4eb5a363e381aaa2fb5fd0d8da14267b0db4d
-m
 =src/main/kotlin/br/com/zup/autores/CadastraAutorController.kt,c\3\c3f708c78e465bc7dce0056851e0e14c8e899d31
 C
 settings.gradle.kts,7\4\749edfcc96398253e5b3416184e95c46621da850
