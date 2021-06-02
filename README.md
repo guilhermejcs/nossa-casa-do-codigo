@@ -1,16 +1,39 @@
-## Micronaut 2.5.4 Documentation
+# Casa do código
 
-- [User Guide](https://docs.micronaut.io/2.5.4/guide/index.html)
-- [API Reference](https://docs.micronaut.io/2.5.4/api/index.html)
-- [Configuration Reference](https://docs.micronaut.io/2.5.4/guide/configurationreference.html)
-- [Micronaut Guides](https://guides.micronaut.io/index.html)
----
+## Tecnologias:
 
-## Feature http-client documentation
+* Koltin
+* Micronaut
+* Gradle
 
-- [Micronaut HTTP Client documentation](https://docs.micronaut.io/latest/guide/index.html#httpClient)
 
-## Feature jdbc-hikari documentation
 
-- [Micronaut Hikari JDBC Connection Pool documentation](https://micronaut-projects.github.io/micronaut-sql/latest/guide/index.html#jdbc)
+## Configurando No-args
+
+Não foi necessário configurar o plugin no-arg para que a aplicação funcionasse
+
+## Configurando plugin All-open
+
+Para usar a anotação *@Transaction* sem ter que declarar a classe e métodos do *Controller* como *open*, pode-se utilizar o plugin All-open.
+
+O código abaixo deve ser inserido no arquivo build.gradle.kts
+
+```groovy
+dependencies {
+    annotationProcessor("io.micronaut","micronaut-inject-java","1.5.0")
+    compile ("io.micronaut","micronaut-aop", "1.5.0")
+}
+
+buildscript {
+    dependencies {
+        classpath("org.jetbrains.kotlin","kotlin-allopen", "1.5.10")
+    }
+}
+
+apply { plugin("kotlin-allopen") }
+
+allOpen {
+    annotation("io.micronaut.http.annotation.Controller")
+}
+```
 
