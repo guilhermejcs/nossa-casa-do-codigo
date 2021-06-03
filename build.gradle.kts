@@ -92,6 +92,4 @@ tasks {
             jvmTarget = "11"
         }
     }
-
-
 }

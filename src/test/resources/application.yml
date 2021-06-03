@@ -1,0 +1,26 @@
+micronaut:
+  application:
+    name: nossaCasaDoCodigo
+
+# Substitui banco de testes
+datasources:
+  default:
+    url: jdbc:h2:mem:default;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    username: sa
+    password: ""
+    driverClassName: org.h2.Driver
+
+# Habilita log do contexto transacional
+looger:
+  levels:
+    io.micronaut.transaction: DEBUG
+
+# JPA
+jpa:
+  default:
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: update
+        show_sql: true
+        format_sql: true
